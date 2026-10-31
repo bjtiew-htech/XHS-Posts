@@ -24,3 +24,4 @@ hidden: true
 
 # 输出
 严格按 `templates/02_fact_sheet.md` 的声明表格式，用 `send_message` 发回编排器（编排器会原样保存为 `02_fact_sheet.md`）。
+

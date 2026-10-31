@@ -5,3 +5,4 @@
 - 子智能体：`.agents/agents/daxi-intel-researcher`（事实核查）、`.agents/agents/daxi-supervisory-critic`（独立审核，只读）。
 - 编排器不得自己核事实、不得自己写审核结论；`scripts/publish_gate.py` 不通过的帖子不得发布。
 - `_archive/` 是历史遗留，不要读取或引用。
+

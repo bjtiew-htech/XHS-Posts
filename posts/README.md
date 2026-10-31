@@ -1,7 +1,5 @@
-# Daily Generated Xiaohongshu Post Packages
+# posts/
 
-Each daily run of the `daxi-daily-post` skill creates a subfolder here named `YYYY-MM-DD_postXX/` containing:
-- `copy.md` — 3 Cover Title options, Post Body, Hashtags, Pinned First Comment hook, and Safe DM Handoff script.
-- `slides.html` — 6-slide 3:4 (`1080×1440` scaled) consulting carousel ready to view in browser and screenshot/export.
-- `critic_audit.md` — Compliance & quality scorecard verified against `config/brand_constraints.md`.
+每帖一个目录 `YYMMDD-XX/`（`-01` 本申硕 12:30，`-02` 高申本 & 家长 20:00）。文件清单与生成顺序见 `config/pipeline.md`：
 
+`01_brief.md` → `02_fact_sheet.md` → `text.md` + `index.html` → `01..NN.jpg` + `.render_manifest.json` → `04_preflight_report.json` → `critic_audit.md`

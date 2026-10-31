@@ -36,3 +36,4 @@ flowchart LR
 4. **preflight**：`python3 scripts/preflight_gate.py posts/<id>`。FAIL 退回第 3 步。PASS 时记下输出的 `content_hash`。
 5. **独立审核**：按 `templates/critic_request.md` 调用 `daxi-supervisory-critic`（同一天中午 + 晚上两篇合并送审一次）。VETO → 回到第 3 步修改 → 重新渲染、preflight → 把**新哈希**发给**同一个 critic** 复审。APPROVED → 按 `templates/critic_audit.md` 转录（必须含 `conversation://<critic 对话 id>`）。
 6. **publish**：`python3 scripts/publish_gate.py posts/<id>` 显示 ✅ 后，才能更新 tracker 并发布。发布后按 `experiments/` 用 `scripts/log_metrics.py` 录入数据。
+

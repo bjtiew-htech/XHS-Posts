@@ -26,3 +26,4 @@
 ## 规则 5：不重复
 - 立项前查 `tracker/posts_master.csv` 和最近 14 天的帖子，避免同地区同分数段同角度重复。
 - 禁止 PS Before/After 老套路重复出现。
+

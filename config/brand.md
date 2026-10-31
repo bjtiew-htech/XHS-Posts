@@ -26,3 +26,4 @@
 ## 5. 转化
 - 末页只用**评论区查表**引导（3 秒可回的格式模板），不得出现任何导流限流词（见 `rules.json`）。
 - `text.md` 必含：置顶评论话术（Pinned First Comment）+ 蓝 V 评论追粉两步话术（Blue-V Comment Follow-Up Script）。
+

@@ -37,3 +37,4 @@ def content_hash(post_dir: str) -> str:
         h.update(os.path.basename(p).encode())
         h.update(sha256_file(p).encode() if os.path.exists(p) else b"MISSING")
     return h.hexdigest()[:16]
+
