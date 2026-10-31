@@ -1,0 +1,47 @@
+{
+  "_doc": "唯一的机器规则源。preflight_gate.py / publish_gate.py 只从这里读取；文档里不得再抄写数值，只写“见 config/rules.json”。",
+  "title": {
+    "max_chars": 20,
+    "required_separator": "｜"
+  },
+  "banned_words": {
+    "absolute": ["第一", "唯一", "最牛", "最强", "顶级", "顶尖", "国家级", "世界级", "金牌", "独家", "首选", "100%", "保录", "包过", "稳录", "内部渠道", "内部名额"],
+    "throttle": ["私信", "私聊", "后台滴滴", "加微信", "加V", "VX", "免费领"]
+  },
+  "decorative_english_patterns": [
+    "\\bTIER\\s*0\\d\\b",
+    "\\bISSUE\\s+STRIP\\b",
+    "\\bPATHWAY\\s+MATRIX\\b",
+    "\\bADMISSIONS\\s+INSIGHT\\b",
+    "\\bSTRUCTURAL\\s+FLAW\\b",
+    "\\bCORE\\s+TAKEAWAY\\b"
+  ],
+  "slides": {
+    "min": 7,
+    "max": 18,
+    "typical": "8-12",
+    "pair_max_delta": 1,
+    "width": 1080,
+    "height": 1440,
+    "overflow_tolerance_px": 2
+  },
+  "typography": {
+    "body_min_px": 22,
+    "inner_headline_min_px": 44
+  },
+  "regions_per_post_max": 2,
+  "text_md_required_sections": ["### Hashtag", "Pinned First Comment", "Blue-V Comment Follow-Up Script"],
+  "required_files": {
+    "preflight": ["01_brief.md", "02_fact_sheet.md", "text.md", "index.html"],
+    "publish": ["01_brief.md", "02_fact_sheet.md", "text.md", "index.html", ".render_manifest.json", "04_preflight_report.json", "critic_audit.md"]
+  },
+  "fact_traceability": {
+    "_doc": "正文中每个 QS 排名数字必须能在本帖 02_fact_sheet.md 中找到（写作 #N / =#N / QS N）。",
+    "enforce_qs_ranks": true
+  },
+  "critic": {
+    "transcript_root": "~/.gemini/antigravity/brain",
+    "transcript_relpath": ".system_generated/logs/transcript.jsonl",
+    "required_markers": ["VERDICT: APPROVED", "AUDITED_HASH: "]
+  }
+}

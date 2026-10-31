@@ -1,0 +1,6 @@
+snapshot_date,post_id,publish_date,age_days,checkpoint_type,impressions,views,cover_ctr_pct,interaction_rate_pct,likes,comments,saves,shares,avg_view_sec,new_followers,delta_impressions,velocity_imp_per_day
+2026-10-31,261018-01,2026-10-18,13,Baseline_Import,1202,152,14.8,5.03,3,0,4,1,29.1,0,1202,92.5
+2026-10-31,261019-01,2026-10-19,12,Baseline_Import,359,34,12.5,11.8,1,0,2,1,14.0,0,359,29.9
+2026-10-31,261020-01,2026-10-20,11,Baseline_Import,299,24,11.0,8.3,1,0,1,0,42.1,0,299,27.2
+2026-10-31,261021-01,2026-10-21,10,Baseline_Import,751,119,16.6,6.9,2,0,4,2,99.2,1,751,75.1
+

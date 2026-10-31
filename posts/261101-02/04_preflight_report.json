@@ -1,0 +1,21 @@
+{
+  "post_id": "261101-02",
+  "gate": "preflight_gate.py (machine gate #1)",
+  "timestamp": "2026-10-31T14:43:23.962408+00:00",
+  "slide_count": 9,
+  "status": "PASS",
+  "content_hash": "6b945826b18a33dd",
+  "checks": {
+    "upstream_deliverables": "PASS",
+    "title_length": "PASS (20 chars): 高申本算账｜30-45万英澳本科真实账单",
+    "banned_words": "PASS",
+    "zero_decorative_english": "PASS",
+    "slide_count": "PASS (9 slides)",
+    "pagination_consistency": "PASS",
+    "render_freshness_and_dimensions": "PASS",
+    "chromium_dom_geometry": "PASS",
+    "text_md_sections": "PASS",
+    "qs_rank_traceability": "PASS"
+  },
+  "errors": []
+}

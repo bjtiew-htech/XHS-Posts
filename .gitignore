@@ -1,0 +1,7 @@
+node_modules/
+_render_tmp/
+.render-*.html
+__pycache__/
+.DS_Store
+# 第三方 AGPL skill 存档：不纳入版本库
+_archive/**/vendor/

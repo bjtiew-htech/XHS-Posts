@@ -1,0 +1,21 @@
+{
+  "post_id": "261031-02",
+  "gate": "preflight_gate.py (machine gate #1)",
+  "timestamp": "2026-10-31T14:43:15.314734+00:00",
+  "slide_count": 9,
+  "status": "PASS",
+  "content_hash": "9215bc76198f076f",
+  "checks": {
+    "upstream_deliverables": "PASS",
+    "title_length": "PASS (20 chars): 高申本算账｜15-30万港澳本科真实账单",
+    "banned_words": "PASS",
+    "zero_decorative_english": "PASS",
+    "slide_count": "PASS (9 slides)",
+    "pagination_consistency": "PASS",
+    "render_freshness_and_dimensions": "PASS",
+    "chromium_dom_geometry": "PASS",
+    "text_md_sections": "PASS",
+    "qs_rank_traceability": "PASS"
+  },
+  "errors": []
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>大熙教育 (Daxi Education) — 3:4 Consulting Carousel Template</title>
+<style>
+  :root {
+    --navy: #14284b;
+    --navy-light: #1f3a68;
+    --gold: #8c6d3f;
+    --gold-bg: #f5eedc;
+    --ivory: #fbf9f5;
+    --border: #dcd6c8;
+    --text-main: #222b38;
+    --text-muted: #646f80;
+    --red-bg: #fff5f5;
+    --red-border: #c53030;
+    --green-bg: #f0fff4;
+    --green-border: #2f855a;
+  }
+  body {
+    background: #1a202c;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 32px;
+    margin: 0;
+    justify-content: center;
+  }
+  /* 3:4 Aspect Ratio Card (540x720 = 0.5x scale of 1080x1440; renders crisp at 2x zoom/retina) */
+  .slide {
+    width: 540px;
+    height: 720px;
+    background: var(--ivory);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 36px 34px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    border-top: 10px solid var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 12px;
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: 0.8px;
+  }
+  .badge {
+    background: var(--navy);
+    color: #f3e5ab;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+  .cover-title {
+    font-size: 29px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.34;
+    margin: 18px 0 10px;
+  }
+  .slide-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.35;
+    margin: 14px 0 8px;
+  }
+  .subtitle {
+    font-size: 14.5px;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 14px;
+    background: var(--gold-bg);
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+  .card {
+    background: #ffffff;
+    border-left: 4px solid var(--navy);
+    padding: 12px 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+  .card-title {
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+    font-size: 14.5px;
+  }
+  .card-bad {
+    border-left-color: var(--red-border);
+    background: var(--red-bg);
+  }
+  .card-bad .card-title {
+    color: var(--red-border);
+  }
+  .card-good {
+    border-left-color: var(--green-border);
+    background: var(--green-bg);
+  }
+  .card-good .card-title {
+    color: var(--green-border);
+  }
+  .cta-banner {
+    background: var(--navy);
+    color: #ffffff;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .cta-banner strong {
+    color: #f3e5ab;
+  }
+  .footer {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <!-- Reference Slide 01: Cover -->
+  <div class="slide">
+    <div>
+      <div class="header">
+        <span>大熙教育 · 留学规划内参</span>
+        <span class="badge">26Fall 申请季特辑</span>
+      </div>
+      <div class="cover-title">封面标题模板：11月各国申请死线与PS文书避坑指南</div>
+      <div class="subtitle">覆盖地区：英 · 美 · 港 · 新 · 澳 · 纽 · 马</div>
+    </div>
+    <div class="content">
+      <div class="card">
+        <div class="card-title">01 | 7大地区11月关键节点</div>
+        哪些院校即将关闭首轮？哪些地区适合现在加入联申保底？
+      </div>
+      <div class="card card-bad">
+        <div class="card-title">02 | DIY文书高频被拒雷区</div>
+        为什么“把简历翻译成英文段落”会在首轮直接沦为陪跑？
+      </div>
+      <div class="card card-good">
+        <div class="card-title">03 | 大熙顾问选校与文书法则</div>
+        用“冲刺-匹配-稳妥”三层梯度 + 学术动机闭环拿到理想Offer。
+      </div>
+    </div>
+    <div class="footer">
+      <span>DAXI EDUCATION · 选校定位 / 网申 / 文书精修</span>
+      <span>01 / 06 ➔</span>
+    </div>
+  </div>
+</body>
+</html>
+

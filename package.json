@@ -1,0 +1,9 @@
+{
+  "name": "daxi-xhs-posts",
+  "private": true,
+  "type": "module",
+  "description": "大熙教育 小红书出稿流水线（渲染与机检依赖）",
+  "dependencies": {
+    "playwright": "1.60.0"
+  }
+}
