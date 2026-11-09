@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>大熙教育 · 8 大视觉设计流派样张对比</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Noto+Sans+SC:wght@200..900&family=Noto+Serif+SC:wght@400..900&family=Playfair+Display:ital,wght@0,500..800;1,400..700&family=JetBrains+Mono:wght@400..700&family=ZCOOL+KuaiLe&display=swap">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1a1a1a;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      align-items: center;
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      width: 1080px;
+      height: 1440px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* =====================================================================
+       STYLE 01: Neo-Brutalism × Bento Grid (新粗野主义 × 便当盒撞色风)
+       ===================================================================== */
+    #style-brutalism {
+      background-color: #FFFDF7;
+      background-image: radial-gradient(#D5D0C5 2px, transparent 2px);
+      background-size: 28px 28px;
+      border: 6px solid #111;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #111;
+    }
+    .brutal-box {
+      border: 4px solid #111;
+      box-shadow: 10px 10px 0px #111;
+      border-radius: 20px;
+      background: #fff;
+    }
+    .brutal-pill {
+      display: inline-flex;
+      align-items: center;
+      border: 3px solid #111;
+      box-shadow: 4px 4px 0px #111;
+      border-radius: 999px;
+      padding: 10px 24px;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    /* =====================================================================
+       STYLE 02: Apple Notes Pro × Highlighter (拟真苹果备忘录 × 荧光笔手账风)
+       ===================================================================== */
+    #style-applenotes {
+      background: #FBF9F5;
+      background-image: linear-gradient(to bottom, transparent 47px, rgba(215, 208, 195, 0.45) 48px);
+      background-size: 100% 48px;
+      padding: 64px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #1C1C1E;
+    }
+    .hl-yellow {
+      background: linear-gradient(104deg, rgba(255, 230, 0, 0) 0.9%, rgba(255, 230, 0, 0.85) 2.4%, rgba(255, 230, 0, 0.65) 96%, rgba(255, 230, 0, 0) 98%);
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .hl-green {
+      background: linear-gradient(104deg, rgba(168, 240, 190, 0) 0.9%, rgba(168, 240, 190, 0.85) 2.4%, rgba(168, 240, 190, 0.65) 96%, rgba(168, 240, 190, 0) 98%);
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+    .hl-pink {
+      background: linear-gradient(104deg, rgba(255, 190, 205, 0) 0.9%, rgba(255, 190, 205, 0.85) 2.4%, rgba(255, 190, 205, 0.65) 96%, rgba(255, 190, 205, 0) 98%);
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    /* =====================================================================
+       STYLE 03: XHS Pastel Blob × Dashed Sticker (小红书奶油弥散 × 虚线贴纸风)
+       ===================================================================== */
+    #style-pastel {
+      background: #FEF8F2;
+      padding: 68px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #2D2624;
+    }
+    .pastel-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(85px);
+      z-index: 0;
+      opacity: 0.72;
+    }
+    .sticker-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      border: 2.5px dashed #E2B6A9;
+      border-radius: 32px;
+      padding: 36px 40px;
+      box-shadow: 0 18px 40px rgba(180, 130, 115, 0.08);
+    }
+
+    /* =====================================================================
+       STYLE 04: Cornell Grid Study Notes (康奈尔方格学霸笔记 × 红蓝批注风)
+       ===================================================================== */
+    #style-cornell {
+      background-color: #F8F9FA;
+      background-image:
+        linear-gradient(to right, rgba(66, 133, 244, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(66, 133, 244, 0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #1E293B;
+    }
+    .red-pen {
+      color: #DC2626;
+      border: 2px solid #DC2626;
+      border-radius: 8px;
+      padding: 3px 12px;
+      font-weight: 700;
+      display: inline-block;
+      transform: rotate(-1.5deg);
+    }
+
+    /* =====================================================================
+       STYLE 05: LJG Editorial Dossier × Sticky Note (李继刚式探案档案 × 便签批注风)
+       ===================================================================== */
+    #style-dossier {
+      background: #EDE6D6;
+      padding: 68px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #1F1B18;
+    }
+    .dossier-paper {
+      background: #F9F6EE;
+      border: 1px solid #C8BFA8;
+      box-shadow: 0 16px 36px rgba(40, 30, 15, 0.10);
+      padding: 48px;
+      position: relative;
+    }
+    .sticky-note {
+      background: #FFF3A8;
+      box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.12);
+      padding: 28px 32px;
+      transform: rotate(-1.4deg);
+      border-top: 14px solid #F6E06E;
+    }
+    .stamp-badge {
+      border: 3px double #991B1B;
+      color: #991B1B;
+      padding: 8px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      transform: rotate(3deg);
+      display: inline-block;
+    }
+
+    /* =====================================================================
+       STYLE 06: Dark Glassmorphism × Holo Aurora (暗黑流体极光 × 毛玻璃科技风)
+       ===================================================================== */
+    #style-glass {
+      background: #0B0F19;
+      padding: 68px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #F8FAFC;
+    }
+    .aurora-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(110px);
+      z-index: 0;
+    }
+    .glass-panel {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 28px;
+      padding: 36px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =======================================================================
+       CARD 1: Neo-Brutalism × Bento Grid (新粗野主义 × 便当盒撞色风)
+       ======================================================================= -->
+  <section class="card" id="style-brutalism">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <span class="brutal-pill" style="background: #FFE600;">本申硕专栏 · 大学生申研</span>
+      <span class="brutal-pill" style="background: #FFFFFF; font-family: 'JetBrains Mono', monospace;">STYLE 03 · NEO-BRUTALISM</span>
+    </div>
+
+    <div class="brutal-box" style="background: #FF6B4A; color: #fff; padding: 44px 48px;">
+      <div style="display: inline-block; background: #111; color: #FFE600; font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 700; padding: 6px 16px; border-radius: 8px; margin-bottom: 18px;">
+        UNDERGRAD GPA 75 / 80 / 85+
+      </div>
+      <h1 style="font-size: 74px; font-weight: 900; line-height: 1.12; letter-spacing: -0.02em; text-shadow: 4px 4px 0px #111;">
+        双非 / 211 均分定位<br>英港新澳选校红宝书
+      </h1>
+      <p style="font-size: 26px; font-weight: 600; margin-top: 18px; color: #FFFDF7;">
+        拒绝盲目陪跑！3 张便当盒看清你的保底、稳妥与冲刺档位
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <div class="brutal-box" style="background: #FFE600; padding: 34px;">
+        <div style="font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 800; margin-bottom: 8px;">BAND 01 · 低分逆袭</div>
+        <div style="font-size: 56px; font-weight: 900; line-height: 1;">均分 75–79</div>
+        <p style="font-size: 23px; font-weight: 600; line-height: 1.5; margin-top: 14px;">
+          主攻 <b>澳洲八大 (QS前50)</b> 与 <b>利兹/格拉/南安</b> 泛商科；马来亚大学 15万/年高性价比保底。
+        </p>
+      </div>
+
+      <div class="brutal-box" style="background: #A8F0C6; padding: 34px;">
+        <div style="font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 800; margin-bottom: 8px;">BAND 02 · 黄金主力</div>
+        <div style="font-size: 56px; font-weight: 900; line-height: 1;">均分 80–84</div>
+        <p style="font-size: 23px; font-weight: 600; line-height: 1.5; margin-top: 14px;">
+          211 稳冲 <b>曼大/华威/港城/港理/墨大</b>；双非 83+ 重点锁死布大、格拉与港浸会王牌专业。
+        </p>
+      </div>
+
+      <div class="brutal-box" style="grid-column: span 2; background: #E0E7FF; padding: 34px; display: flex; justify-content: space-between; align-items: center; gap: 28px;">
+        <div>
+          <div style="font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 800; margin-bottom: 8px;">BAND 03 · 顶尖学霸局 (均分 85+)</div>
+          <div style="font-size: 36px; font-weight: 900;">冲刺英国 G5 · 港前三 · 新加坡国立/南洋理工</div>
+          <p style="font-size: 22px; font-weight: 600; margin-top: 8px; color: #333;">
+            硬件全员达标，胜负手在于「先修课匹配度 + 定制学术文书 + 11月首轮递交」。
+          </p>
+        </div>
+        <div style="background: #111; color: #FFE600; font-size: 48px; font-weight: 900; padding: 20px 28px; border-radius: 16px; white-space: nowrap;">
+          2:3:1
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 22px;">
+      <span>大熙教育 · DAXI EDUCATION</span>
+      <span>评论区留言【院校+均分+地区】测档位 →</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       CARD 2: Apple Notes Pro × Highlighter (拟真苹果备忘录 × 荧光笔手账风)
+       ======================================================================= -->
+  <section class="card" id="style-applenotes">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; color: #D97706; font-size: 28px; font-weight: 600; padding-bottom: 24px; border-bottom: 1px solid #E5E0D5;">
+        <span>‹ 备忘录 · 大熙选校智库</span>
+        <span style="font-size: 22px; color: #8E8E93; font-family: 'JetBrains Mono';">STYLE 04 · APPLE NOTES PRO</span>
+        <span>完成</span>
+      </div>
+      <div style="text-align: center; color: #8E8E93; font-size: 20px; margin-top: 18px;">
+        2026年10月31日 17:30 · 本申硕专栏（大学生申研必存）
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <h1 style="font-size: 62px; font-weight: 800; line-height: 1.22; letter-spacing: -0.01em;">
+        改完 300 份本科成绩单：<br>
+        <span class="hl-yellow">均分 75 / 80 / 85+</span> 申研真实底线
+      </h1>
+
+      <div style="background: #FFFFFF; border-radius: 24px; padding: 34px 38px; box-shadow: 0 8px 24px rgba(0,0,0,0.04); border: 1px solid #ECE7DF;">
+        <div style="font-size: 30px; font-weight: 800; margin-bottom: 14px;">
+          📌 一、本科均分 75–79 分（双非 / 211 低均分）
+        </div>
+        <p style="font-size: 25px; line-height: 1.68; color: #3A3A3C;">
+          • 别死磕英国商学院正统金融！改申 <span class="hl-green">社科院/工学院下的泛商科与项目管理</span>，利兹、格拉、南安录取率直接翻倍。<br>
+          • 澳洲八大（悉尼/新南/莫纳什）对双非 75–78 分极其友好，稳守 <span class="hl-yellow">QS 前 50 名校底线</span>。
+        </p>
+      </div>
+
+      <div style="background: #FFFFFF; border-radius: 24px; padding: 34px 38px; box-shadow: 0 8px 24px rgba(0,0,0,0.04); border: 1px solid #ECE7DF;">
+        <div style="font-size: 30px; font-weight: 800; margin-bottom: 14px;">
+          📌 二、本科均分 80–84 分（黄金分水岭）
+        </div>
+        <p style="font-size: 25px; line-height: 1.68; color: #3A3A3C;">
+          • 985/211 均分 80+ 可主冲 <span class="hl-yellow">曼大、华威 WMG、港城大、港理工、墨尔本大学</span>。<br>
+          • 双非 82–84 分切忌盲投卡严 List 的专业，必须逐院核查最新认可名单，搭配 <span class="hl-pink">定制化实习逻辑文书</span> 突围。
+        </p>
+      </div>
+
+      <div style="background: #FFFBEB; border-left: 6px solid #F59E0B; border-radius: 16px; padding: 28px 34px;">
+        <div style="font-size: 26px; font-weight: 800; color: #B45309; margin-bottom: 8px;">
+          ✍️ 顾问手记（评论区 3 秒免费测档位）：
+        </div>
+        <p style="font-size: 24px; color: #78350F; line-height: 1.55;">
+          直接在评论区留下：<b>【本科院校档次 + 专业 + 均分 + 意向地区】</b>，大熙导师逐一回复你 3 个保底/稳妥/冲刺方向！
+        </p>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; color: #8E8E93; font-size: 21px; border-top: 1px solid #E5E0D5; padding-top: 20px;">
+      <span>📁 文件夹：大熙教育 · 本申硕红宝书</span>
+      <span>01 / 06</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       CARD 3: XHS Pastel Blob × Dashed Sticker (小红书奶油弥散 × 虚线贴纸风)
+       ======================================================================= -->
+  <section class="card" id="style-pastel">
+    <div class="pastel-blob" style="width: 520px; height: 520px; background: #FFD6E0; top: -120px; right: -80px;"></div>
+    <div class="pastel-blob" style="width: 480px; height: 480px; background: #D4F0F0; bottom: 80px; left: -100px;"></div>
+    <div class="pastel-blob" style="width: 420px; height: 420px; background: #FFF0C2; top: 420px; right: 180px;"></div>
+
+    <div style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center;">
+      <span style="background: #FF8FA3; color: #fff; padding: 10px 26px; border-radius: 999px; font-size: 22px; font-weight: 700; box-shadow: 0 8px 20px rgba(255,143,163,0.35);">
+        高申本 &amp; 家长专栏 · 双轨升学
+      </span>
+      <span style="font-family: 'JetBrains Mono'; font-size: 20px; color: #9C827A;">STYLE 05 · XHS PASTEL STICKER</span>
+    </div>
+
+    <div style="position: relative; z-index: 2; margin-top: 12px;">
+      <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 32px; color: #C86D51; margin-bottom: 8px;">
+        Undergraduate Dual-Track Guide 2026
+      </p>
+      <h1 style="font-size: 68px; font-weight: 900; line-height: 1.18; color: #2D2624;">
+        高考不是唯一独木桥<br>
+        <span style="color: #D9534F;">普高与国际课程</span>本科全规划
+      </h1>
+    </div>
+
+    <div style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 24px;">
+      <div class="sticker-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="background: #FFE5EC; color: #C9184A; font-weight: 800; font-size: 22px; padding: 6px 18px; border-radius: 999px;">通道 01 · 高考成绩直申</span>
+          <span style="font-family: 'Playfair Display'; font-style: italic; font-size: 32px; color: #D9A090;">01</span>
+        </div>
+        <p style="font-size: 25px; font-weight: 600; line-height: 1.55; color: #3D3330;">
+          高三模考在一本线/特控线上下，凭高考分直申 <b>英国南安/利兹、澳洲八大、港澳名校与马来亚大学</b> 本科大一，不锁死国内统招志愿。
+        </p>
+      </div>
+
+      <div class="sticker-card" style="border-color: #9EC5AB;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="background: #D8F3DC; color: #1B4332; font-weight: 800; font-size: 22px; padding: 6px 18px; border-radius: 999px;">通道 02 · 本预 + 国际大一免高考</span>
+          <span style="font-family: 'Playfair Display'; font-style: italic; font-size: 32px; color: #74A88E;">02</span>
+        </div>
+        <p style="font-size: 25px; font-weight: 600; line-height: 1.55; color: #3D3330;">
+          高二结业或高三不想死磕高考，仅凭 <b>高中平时成绩（均分 75–85%+）</b> 免高考直通 UCL、爱丁堡、曼大与澳八大本科桥梁。
+        </p>
+      </div>
+
+      <div class="sticker-card" style="border-color: #A3C4F3;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <span style="background: #E0AAFF; color: #3C096C; font-weight: 800; font-size: 22px; padding: 6px 18px; border-radius: 999px;">通道 03 · A-Level / IB / AP 全球联申</span>
+          <span style="font-family: 'Playfair Display'; font-style: italic; font-size: 32px; color: #8E9AAF;">03</span>
+        </div>
+        <p style="font-size: 25px; font-weight: 600; line-height: 1.55; color: #3D3330;">
+          凭预估分 + 课本延伸学术型英文文书（PS），同步冲刺 <b>英国 G5、港前三、新二与美本 Top 50</b>。
+        </p>
+      </div>
+    </div>
+
+    <div style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; color: #8A736B; font-size: 22px; font-weight: 600;">
+      <span>大熙教育 · 高申本与家长规划中心</span>
+      <span>● ○ ○ ○ ○ ○  01 / 06</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       CARD 4: Cornell Grid Study Notes (康奈尔方格学霸笔记 × 红蓝批注风)
+       ======================================================================= -->
+  <section class="card" id="style-cornell">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #1E3A8A; padding-bottom: 20px;">
+      <div>
+        <span style="background: #1E3A8A; color: #fff; font-size: 20px; font-weight: 700; padding: 6px 16px; border-radius: 4px; margin-right: 12px;">CORNELL NOTE #04</span>
+        <span style="font-size: 24px; font-weight: 700; color: #1E3A8A;">高申本文书批注实录 · 为什么你的文书像假大空？</span>
+      </div>
+      <span class="red-pen">招生官真实视角 A+</span>
+    </div>
+
+    <!-- Cornell Main Body: Left Cue Column (30%) + Right Notes Column (70%) -->
+    <div style="display: grid; grid-template-columns: 280px 1fr; border: 2px solid #1E3A8A; background: rgba(255,255,255,0.88); flex: 1; margin: 28px 0;">
+      <!-- Left Cue Column -->
+      <div style="border-right: 2px solid #1E3A8A; padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; background: rgba(239, 246, 255, 0.55);">
+        <div>
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #1D4ED8; font-weight: 700;">KEY QUESTION 01</div>
+          <div style="font-size: 28px; font-weight: 800; color: #1E293B; margin-top: 8px;">高中生没有科研和高管实习怎么办？</div>
+          <p style="font-size: 20px; color: #475569; margin-top: 12px; line-height: 1.5;">
+            UCAS 与港前三招生官反感包装出来的“挂名水实习”，最看重课本知识的真实延伸。
+          </p>
+        </div>
+
+        <div style="border-top: 1px dashed #93C5FD; padding-top: 28px;">
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #DC2626; font-weight: 700;">RED FLAG 禁忌</div>
+          <div style="font-size: 26px; font-weight: 800; color: #991B1B; margin-top: 8px;">三大自杀式开头：</div>
+          <p style="font-size: 20px; color: #7F1D1D; margin-top: 10px; line-height: 1.6;">
+            1. 从小热爱经济学<br>
+            2. 组织社团义卖<br>
+            3. 学会了领导力与团队合作
+          </p>
+        </div>
+
+        <div style="border-top: 1px dashed #93C5FD; padding-top: 28px;">
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #047857; font-weight: 700;">FORMULA 公式</div>
+          <div style="font-size: 24px; font-weight: 800; color: #065F46; margin-top: 8px;">
+            微观察反差 + 课本理论验证 + 追问高阶概念
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Notes Column -->
+      <div style="padding: 36px 40px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="background: #FEE2E2; color: #991B1B; font-weight: 800; font-size: 20px; padding: 4px 14px; border-radius: 6px;">❌ 修改前（低分流水账）</span>
+            <span style="color: #DC2626; font-weight: 700; font-size: 20px;">批注：空洞套话，5秒划走</span>
+          </div>
+          <p style="font-family: Georgia, serif; font-style: italic; font-size: 23px; line-height: 1.55; color: #64748B; background: #F8FAFC; padding: 20px 24px; border-left: 4px solid #EF4444;">
+            "Since childhood, I have been fascinated by economics. As the president of our school's Business Club, I organized a charity sale and learned leadership and teamwork..."
+          </p>
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="background: #DCFCE7; color: #166534; font-weight: 800; font-size: 20px; padding: 4px 14px; border-radius: 6px;">✅ 大熙精修后（G5/港大录取范本）</span>
+            <span style="color: #15803D; font-weight: 700; font-size: 20px;">批注：细节真实，学术味拉满</span>
+          </div>
+          <p style="font-family: Georgia, serif; font-size: 23px; line-height: 1.58; color: #0F172A; background: #F0FDF4; padding: 22px 24px; border-left: 4px solid #16A34A;">
+            "When our school canteen raised meal prices by 15%, demand for combo sets barely dropped—<span class="hl-yellow">contradicting the elastic demand curve in my textbook</span>. Tracking 200 students' choices led me to <span class="hl-green">behavioral economics and nudge theory</span>..."
+          </p>
+        </div>
+
+        <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 20px 24px;">
+          <div style="font-size: 22px; font-weight: 800; color: #1E40AF; margin-bottom: 6px;">💡 蓝笔精修拆解：</div>
+          <p style="font-size: 21px; color: #1E3A8A; line-height: 1.55;">
+            把虚无的“社团会长”替换为<b>“食堂涨价 15% 却未印证课本弹性需求曲线”</b>的校园实证观察，自然引出行为经济学，瞬间抓住招生官眼球。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cornell Bottom Summary Row -->
+    <div style="background: #1E3A8A; color: #fff; padding: 24px 36px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-size: 24px; font-weight: 700;">
+        📌 总结栏：评论区留言【年级 + 模考/预估分 + 意向专业】，获取同款文书破局思路
+      </div>
+      <div style="font-family: 'JetBrains Mono'; font-size: 20px; opacity: 0.85;">大熙教育 · 04/06</div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       CARD 5: LJG Editorial Dossier × Sticky Note (李继刚式探案档案 × 便签批注风)
+       ======================================================================= -->
+  <section class="card" id="style-dossier">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #2C2520; padding-bottom: 20px;">
+      <div style="font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 700; letter-spacing: 0.1em;">
+        CASE FILE № 2026-DX01 · 选校探案档案
+      </div>
+      <span class="stamp-badge">CLASSIFIED · 内部定校拆解</span>
+    </div>
+
+    <div class="dossier-paper" style="margin-top: 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="font-family: 'JetBrains Mono'; font-size: 19px; color: #8C3B1E; font-weight: 700; letter-spacing: 0.12em;">
+          THE PARADOX · 为什么同是双非 80 分，有人全聚德、有人录 QS 前 50？
+        </div>
+        <h1 style="font-family: 'Noto Serif SC', serif; font-size: 62px; font-weight: 700; line-height: 1.2; margin-top: 14px; color: #1F1B18;">
+          网传 List 不会告诉你的<br>「学院独立小名单」暗门
+        </h1>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 22px; font-family: 'Noto Serif SC', serif;">
+          <div style="border-left: 3px solid #1F1B18; padding-left: 22px;">
+            <div style="font-size: 28px; font-weight: 700;">线索一：商学院 vs. 社科院/环发院</div>
+            <p style="font-size: 22px; line-height: 1.6; color: #4A4238; margin-top: 6px;">
+              曼大、利兹、布大、格拉的商学院卡死百强名单；但同一所大学下设在环发院、社科院或工学院的泛商科，双非均分 78–82 即可合法绕过商学院高墙。
+            </p>
+          </div>
+          <div style="border-left: 3px solid #8C3B1E; padding-left: 22px;">
+            <div style="font-size: 28px; font-weight: 700;">线索二：11 月首轮 vs. 3 月末轮</div>
+            <p style="font-size: 22px; line-height: 1.6; color: #4A4238; margin-top: 6px;">
+              港城、港理与英国罗素集团采用滚动录取（Rolling Basis）。11 月递交面对的是 80% 空余席位；等到次年 2 月考研出分再投，只剩 10% 候补席位。
+            </p>
+          </div>
+        </div>
+
+        <div class="sticky-note">
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #92400E; font-weight: 700; margin-bottom: 10px;">
+            📌 顾问便签 · 破局定论
+          </div>
+          <p style="font-size: 24px; font-weight: 700; line-height: 1.55; color: #451A03;">
+            “选校不是按总分排大小，而是查清目标专业挂在哪个学院（Faculty）名下。”
+          </p>
+          <hr style="border: 0; border-top: 1px dashed #D97706; margin: 18px 0;">
+          <p style="font-size: 20px; color: #78350F; line-height: 1.5;">
+            适用画像：本科均分 75–84、想冲刺英港新澳 QS 前 100 的双非与 211 同学。
+          </p>
+        </div>
+      </div>
+
+      <div style="background: #2C2520; color: #F9F6EE; padding: 26px 34px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-family: 'JetBrains Mono'; font-size: 17px; color: #D4B483;">ACTION PROTOCOL · 评论区查档</div>
+          <div style="font-size: 25px; font-weight: 600; margin-top: 4px;">留言【本科院校 + 专业 + 均分】，帮你核查可捡漏的交叉学科名单</div>
+        </div>
+        <span style="font-family: 'JetBrains Mono'; font-size: 22px; color: #D4B483;">→</span>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono'; font-size: 19px; color: #5C5346; margin-top: 20px;">
+      <span>ARCHIVE · 大熙教育选校实验室</span>
+      <span>STYLE 06 · LJG EDITORIAL DOSSIER</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       CARD 6: Dark Glassmorphism × Holo Aurora (暗黑流体极光 × 毛玻璃科技风)
+       ======================================================================= -->
+  <section class="card" id="style-glass">
+    <div class="aurora-orb" style="width: 560px; height: 560px; background: #3B82F6; top: -120px; left: -100px; opacity: 0.45;"></div>
+    <div class="aurora-orb" style="width: 520px; height: 520px; background: #8B5CF6; bottom: -80px; right: -80px; opacity: 0.42;"></div>
+    <div class="aurora-orb" style="width: 380px; height: 380px; background: #10B981; top: 460px; left: 320px; opacity: 0.25;"></div>
+
+    <div style="position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center;">
+      <span style="background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(96, 165, 250, 0.4); color: #93C5FD; padding: 10px 24px; border-radius: 999px; font-size: 20px; font-weight: 600;">
+        DAXI DATA LAB · 2026 联申大数据
+      </span>
+      <span style="font-family: 'JetBrains Mono'; font-size: 19px; color: #94A3B8;">STYLE 07 · DARK GLASSMORPHISM</span>
+    </div>
+
+    <div style="position: relative; z-index: 2;">
+      <p style="font-family: 'JetBrains Mono'; font-size: 22px; color: #38BDF8; letter-spacing: 0.1em; margin-bottom: 12px;">
+        MULTI-COUNTRY ADMISSIONS MATRIX
+      </p>
+      <h1 style="font-size: 68px; font-weight: 800; line-height: 1.16; background: linear-gradient(90deg, #FFFFFF 0%, #93C5FD 55%, #C4B5FD 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        英美港新澳马纽 7 国联申<br>录取权重与性价比透视
+      </h1>
+    </div>
+
+    <div style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      <div class="glass-panel">
+        <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #38BDF8;">CLUSTER 01 · 港新英顶尖</div>
+        <div style="font-size: 46px; font-weight: 800; margin: 8px 0; color: #fff;">85+ 硬件局</div>
+        <p style="font-size: 22px; line-height: 1.55; color: #CBD5E1;">
+          G5 / 港前三 / 新二：院校背景占 45%，核心课程匹配度与高阶学术文书占 35%，首轮递交占 20%。
+        </p>
+      </div>
+
+      <div class="glass-panel">
+        <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #34D399;">CLUSTER 02 · 澳新名校保底</div>
+        <div style="font-size: 46px; font-weight: 800; margin: 8px 0; color: #fff;">75+ 逆袭局</div>
+        <p style="font-size: 22px; line-height: 1.55; color: #CBD5E1;">
+          墨大 / 悉尼 / 新南 / 奥克兰：不卡软背景与 GMAT，均分达标即可锁定 QS 前 50 有条件录取。
+        </p>
+      </div>
+
+      <div class="glass-panel" style="grid-column: span 2; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #C084FC;">CLUSTER 03 · 港澳马高性价比双保险</div>
+          <div style="font-size: 34px; font-weight: 800; margin-top: 6px; color: #fff;">马来亚大学 (QS前70) &amp; 澳门大学</div>
+          <p style="font-size: 22px; color: #CBD5E1; margin-top: 8px;">
+            全年总花费 10–18 万 RMB，考研党与工薪家庭进可攻退可守的黄金备选。
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 54px; font-weight: 800; color: #34D399;">10–18W</div>
+          <div style="font-family: 'JetBrains Mono'; font-size: 18px; color: #94A3B8;">RMB / YEAR</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-panel" style="padding: 24px 36px; display: flex; justify-content: space-between; align-items: center; border-color: rgba(56, 189, 248, 0.4);">
+      <span style="font-size: 24px; font-weight: 700; color: #E0F2FE;">💬 评论区回复【背景 + 均分 + 预算】，3 秒生成你的联申组合</span>
+      <span style="font-family: 'JetBrains Mono'; font-size: 20px; color: #38BDF8;">大熙教育</span>
+    </div>
+  </section>
+
+</body>
+</html>

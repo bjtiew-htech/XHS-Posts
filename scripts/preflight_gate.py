@@ -67,11 +67,34 @@ def audit_post(post_dir: str) -> bool:
         bad = len(t) > R["title"]["max_chars"] or R["title"]["required_separator"] not in t
         record("title_length", [f"title '{t}' len={len(t)}"] if bad else [], f"PASS ({len(t)} chars): {t}")
 
-    # 3. 违禁 / 限流词
+    # 3. 违禁 / 限流词 + 禁诱导留言换奖励
     words = R["banned_words"]["absolute"] + R["banned_words"]["throttle"]
     hits = [f"text.md contains '{w}'" for w in words if w in text_md] + \
            [f"index.html contains '{w}'" for w in words if w in visible]
+    # Check comment inducement patterns on Body/Hashtag/Pinned Comment and visible HTML
+    public_text_md = text_md.split("### 💬 Blue-V Comment Follow-Up Script")[0]
+    for pat in R.get("comment_inducement_patterns", []):
+        if re.search(pat, public_text_md):
+            hits.append(f"text.md matches comment inducement pattern '{pat}'")
+        if re.search(pat, visible):
+            hits.append(f"index.html matches comment inducement pattern '{pat}'")
     record("banned_words", hits)
+
+    # 3b. 正文 + Hashtag 总字数上限（Hashtag 计入字数）
+    max_body_chars = R.get("body_plus_hashtags_max_chars", 1000)
+    m_body = re.search(r"###\s*Body:\s*\n([\s\S]*?)\n---\s*\n###\s*Hashtag:\s*\n([\s\S]*?)(?:\n---|\Z)", text_md)
+    if not m_body:
+        record("body_plus_hashtags_length", ["cannot parse ### Body: and ### Hashtag: sections in text.md"])
+    else:
+        body_part = m_body.group(1).strip()
+        hashtag_part = m_body.group(2).strip()
+        combined_post_text = f"{body_part}\n\n{hashtag_part}"
+        total_len = len(combined_post_text)
+        record(
+            "body_plus_hashtags_length",
+            [f"Body + Hashtags len={total_len} exceeds max {max_body_chars}"] if total_len > max_body_chars else [],
+            f"PASS ({total_len}/{max_body_chars} chars incl. hashtags)"
+        )
 
     # 4. 装饰英文
     record("zero_decorative_english",
