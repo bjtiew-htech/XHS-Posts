@@ -1,0 +1,22 @@
+{
+  "post_id": "261109-02",
+  "gate": "preflight_gate.py (machine gate #1)",
+  "timestamp": "2026-11-09T05:09:08.768348+00:00",
+  "slide_count": 9,
+  "status": "PASS",
+  "content_hash": "a41827aeac60c687",
+  "checks": {
+    "upstream_deliverables": "PASS",
+    "title_length": "PASS (20 chars): 高申本算账｜10-25万大马新西兰读本科",
+    "banned_words": "PASS",
+    "body_plus_hashtags_length": "PASS (994/1000 chars incl. hashtags)",
+    "zero_decorative_english": "PASS",
+    "slide_count": "PASS (9 slides)",
+    "pagination_consistency": "PASS",
+    "render_freshness_and_dimensions": "PASS",
+    "chromium_dom_geometry": "PASS",
+    "text_md_sections": "PASS",
+    "qs_rank_traceability": "PASS"
+  },
+  "errors": []
+}

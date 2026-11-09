@@ -180,6 +180,23 @@
 
 ---
 
+### `[2026-11-09 13:15] Entry #16 — Codified Body+Hashtags Length & Anti-Comment-Inducement Gates; Delivered Pair_M2 / Pair_U2 Day A (261109-01 & 261109-02)`
+- **Compliance & Machine Gate Upgrades (`config/rules.json`, `config/brand.md`, `config/editorial.md`, `scripts/preflight_gate.py`)**:
+  1. **Hashtags Count Toward Body Limit**: Enforced `body_plus_hashtags_max_chars: 1000` in `config/rules.json` and `scripts/preflight_gate.py` so `### Body:` + `### Hashtag` combined never exceed 1,000 characters.
+  2. **Zero Quid-Pro-Quo Comment Inducement**: Banned any reward-exchange / service-exchange phrasing in slides, body, or pinned comments (e.g., `"留言后你将直接获得..."`, `"评论区留XX帮你核出YY"`, `"回复ABCD获得大熙的efgh"`). Switched Slide 09 and `text.md` endings to open resonance discussion around multi-variable edge cases.
+- **Delivered & Cleared `posts/261109-01` & `posts/261109-02` (9 Slides Each, Independent Fact-Check + Critic Audit + Publish Gate Passed)**:
+  1. **`posts/261109-01/` (`Pair_M2` Day A Noon `12:30` · `【本申硕专栏】` · `Cover_B_Typography`)**:
+     - Title (`20` chars): `本申硕捡漏｜双非75-80申澳洲八大清单` (`content_hash = 38e3f6dd91890e0b`).
+     - Fact-Check: [`a9068d6a`](conversation://a9068d6a-7314-487f-95dd-a7eb791828f1) (`posts/261109-01/02_fact_sheet.md`).
+     - Highlights: Arithmetic vs Credit-Weighted GPA split across Go8 (`USYD =#25 / Monash =#36 / UNSW #20` vs `Melbourne #19 / UQ =#42 / UWA #77 / Adelaide University =#82 / ANU =#32`), UNSW Trimester Double Pass & `6,600–7,750 AUD` (`3.1–3.6万 RMB`) single-course retake fee, `1.5-yr` vs `2-yr` CRICOS `92-week` Subclass 485 work-visa redline (`IELTS 6.5/5.5` 1-yr validity, age cap `35`, Category 2 regional `2+1=3 yrs` in Perth/Adelaide/Canberra).
+  2. **`posts/261109-02/` (`Pair_U2` Day A Evening `20:00` · `【高申本 & 家长专栏】` · `Cover_A_Illustration`)**:
+     - Title (`20` chars): `高申本算账｜10-25万大马新西兰读本科` (`content_hash = a41827aeac60c687`).
+     - Fact-Check: [`aa2b93ff`](conversation://aa2b93ff-1b12-46e9-92c7-d30a8c6b1e6f) (`posts/261109-02/02_fact_sheet.md`).
+     - Highlights: Custom illustration cover (`cover_bg_my_nz.jpg`, KL Petronas Twin Towers + UM campus vs Auckland Sky Tower + UoA ClockTower), Universiti Malaya (`#58`) `6.5–13.21万 MYR` full-degree tuition (`30–45万 RMB` total) + `80%+` Gaokao CSSD verification & July-to-March intake delay pitfall, Monash Malaysia (`=#36`) / Nottingham Malaysia (`#97`) `36–48万 RMB` 3-yr total (`1/3` of main campus) for bachelor+master budget optimization, University of Auckland (`#65`) `67%–75%+` Gaokao direct entry (`68–82万 RMB` 3 yrs, saving `22–25万` vs 4-yr Foundation) + `3-yr` open PSWV work visa.
+  3. **Independent Critic Approval**: [`2972750c`](conversation://2972750c-8719-4eae-826e-fd8c58decf6c) (`VERDICT: APPROVED` on both hashes) & cleared by `scripts/publish_gate.py`.
+
+---
+
 ## Weekly Retrospective Template (Copy at End of Each Week)
 
 ```markdown

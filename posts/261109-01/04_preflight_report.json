@@ -1,0 +1,22 @@
+{
+  "post_id": "261109-01",
+  "gate": "preflight_gate.py (machine gate #1)",
+  "timestamp": "2026-11-09T05:09:06.979515+00:00",
+  "slide_count": 9,
+  "status": "PASS",
+  "content_hash": "38e3f6dd91890e0b",
+  "checks": {
+    "upstream_deliverables": "PASS",
+    "title_length": "PASS (20 chars): 本申硕捡漏｜双非75-80申澳洲八大清单",
+    "banned_words": "PASS",
+    "body_plus_hashtags_length": "PASS (999/1000 chars incl. hashtags)",
+    "zero_decorative_english": "PASS",
+    "slide_count": "PASS (9 slides)",
+    "pagination_consistency": "PASS",
+    "render_freshness_and_dimensions": "PASS",
+    "chromium_dom_geometry": "PASS",
+    "text_md_sections": "PASS",
+    "qs_rank_traceability": "PASS"
+  },
+  "errors": []
+}
